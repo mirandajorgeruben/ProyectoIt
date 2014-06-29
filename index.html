@@ -1,0 +1,82 @@
+<!DOCTYPE html>		<!--es necesario para que funcion HTML5-->
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>		<!--el atributo charset="utf-8" asegura que los simbolos,acentos o la ea ñ sean interpretados por el navegador.-->
+	<title>Porfolio Jorge Miranda</title>
+	
+	<meta name="description" content="Esta es una presentacion de la pagina sobre lo que vengo desarrollando y probando los años de estudio que realice en la universidad"/>		<!--esto permite la descripcion del sitio, para que en un futuro el buscador lo muestre.-->	
+	
+	<meta name="viewport" content="width=divice-width,initial-scale=1" />	<!-- primero indica que se va a ver segun el ancho del dispositivo(se vera segun el ancho des dispositivo), segundo la escala inicial sera igual a 1 que es igual al 100% del dispositivo(copia exacta del pc escritorio) -->
+	<link rel="shortcut icon" type="image/x-icon" href="metal.ico" />		<!--es para insertar el icono el la barra de enlace-->
+	<link rel="author" type="text/plain" href="humans.txt" />		<!--es para la infomacion oculta sobre el creador-->
+	<link rel="sitemap" type="application/xml" title="sitemap" href="sitemap.xml" />
+	<link rel="stylesheet" href="css/flexslider.css" />		<!-- es para las imagenes de animacion que se van a usar-->
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />		<!--stylesheel es para estilos en cascadas, y media="all" es el un atributo para trabajen dispositivos especificos, ahora no lo usamos-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>		<!--es para las librerias jquery, se las toma del servidor de google(se necesita internet), se entra a la pagina de jquery para extraer la ultima version ////ahora se actualiza solo/////-->
+	<script>
+		!windows.jQuery && document.write("<script src='js/jquery.min.js'></script>")		<!-- sin no encuentra jquery, entonces la carga de forma local - document.write inprime desde la carpeta js-->
+	</script>
+	<script src="js/jquery.flexslider.js"></script>		<!--es para las libreria jquey-->
+	<script>		<!--es para auna ventana asi veo las imagenes-->
+		$(window).load(function(){
+			$(".flexslider").flexslider();		<!--cuando encuentra flexslider lo ejecuta-->
+		});		<!--dentro de windows, o sea acuando habro la pantalla, cargo la funcion-->
+	</script>
+
+	
+	<!--[if lt IE 9]>
+		<script scr="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		*** esto es para que navegadores viejos puedan interpretar html5***
+	<![endif]-->
+</head>
+
+<body>
+	<header>		<!--es el encabezado/cabecera Dentro del cuerpo-->
+		<h1>
+			<a href="index.html">
+				<img class="fade" alt="Inicio del sitio de Jorge Miranda." src="img/logo.jpg">
+			</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="acerca.html">Acerca</a></li>
+				<li><a href="servicios.html">Servicios</a></li>
+				<li><a href="trabajos.html">Trabajos</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="contenido">		<!--permite definir area unica de contenido para el sitio-->
+		<section id="principal">
+			<article id="galeria-inicio">		<!--zona unica de contenido independiente-->
+				<div class="flexslider">		<!--donde se vana cargar los estilos de jquery-->
+					<ul	class="slides">
+						<li>
+							<a href="http://www.unlam.edu.ar"><img src="img/slide1.jpg"/></a>
+							<p class="flex-caption">Imagen de la UNLaM</p>		<!--texto dentro del slide-->
+							
+						</li>
+						<li>
+							<img src="img/slide2.jpg"/>
+							<p class="flex-caption">Html 5</p>
+						</li>
+						<li>
+							<img src="img/slide3.jpg"/>
+						</li>
+						<li>
+							<a href="http://www.taringa.net"><img src="img/slide4.jpg"/></a>
+							<p class="flex-caption">enlace a taringa sobre valve</p>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+		<aside>	
+		</aside>
+	</section>
+	<footer>		<!--pie de pagina en html5-->
+		Aprendiendo HTML5, CSS3, jQuery y Responsive Web Dising con <a rel="author" href="http://twitter.com/bextlan" target="_blank">@bextlan</a> <!-- target es para que lo habra en otra pagina-->
+	</footer>
+</body>
+</html>
